@@ -1,0 +1,223 @@
+:root {
+    font-size: 10px;
+    --main-color: rgba(167, 12, 12, 0.867);
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Seção do vídeo */
+.img-section {
+    margin-top: 8rem; /* espaço para o header */
+    width: 100%;
+    height: auto; /* altura automática baseada no conteúdo */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: var(--bg);
+    border-bottom: var(--border);
+    width: 100vw;
+}
+
+.header .conteudo-limitado {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.5rem 2rem;
+}
+
+.header a img {
+    height: 6rem;
+    margin-left: -8rem;
+}
+
+.header nav a {
+    position: relative;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    padding-right: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #fff;
+}
+
+.header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+}
+
+.header nav a:hover::after {
+    width: calc(100% - 1.9rem);
+}
+
+/* Centraliza conteúdo abaixo do header */
+.conteudo-limitado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.sessao-name {
+    background-color: #000;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.escola-name h1 {
+    color: #fff;
+    font-size: 8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+}
+
+
+
+
+
+
+
+
+/* Seção de ministérios geral */
+.sessao-ministerios {
+    padding: 60px 40px;
+    background: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Cabeçalho */
+.sessao-ministerios .cabecalho {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.sessao-ministerios h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #000;
+}
+
+.sessao-ministerios p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    font-size: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-wrapper svg {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    fill: #888;
+}
+
+
+/* Grade dos ministérios */
+.sessao-ministerios .conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada item */
+.sessao-ministerios .conteudo > div {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.sessao-ministerios .conteudo > div:hover {
+    transform: translateY(-5px);
+}
+
+/* Títulos */
+.sessao-ministerios .conteudo h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+/* Imagens */
+.sessao-ministerios .conteudo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sessao-ministerios h1 {
+        font-size: 2.2rem;
+    }
+
+    .sessao-ministerios p {
+        font-size: 1rem;
+    }
+
+    .sessao-ministerios .conteudo {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,240 @@
+:root {
+    font-size: 10px;
+    --main-color: rgba(167, 12, 12, 0.867);
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Seção do vídeo */
+.img-section {
+    margin-top: 1rem;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.caixa-img {
+    position: absolute;
+    margin-top: 8rem;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 55vh;
+    z-index: -1;
+}
+
+.caixa-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: var(--bg);
+    border-bottom: var(--border);
+    width: 100vw;
+}
+
+.header .conteudo-limitado {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.5rem 2rem;
+}
+
+.header a img {
+    height: 6rem;
+    margin-left: -8rem;
+}
+
+.header nav a {
+    position: relative;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    padding-right: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #fff;
+}
+
+.header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+}
+
+.header nav a:hover::after {
+    width: calc(100% - 1.9rem);
+}
+
+/* Centraliza conteúdo abaixo do header */
+.conteudo-limitado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.caixa-crencas .crencas .acreditamos h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: -15rem;
+    margin-left: 12rem;
+    margin-bottom: 5rem;
+}
+
+.caixa-crencas .crencas .acreditamos h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    margin-left: 12rem;
+    margin-bottom: 5rem;
+}
+
+.caixa-crencas .crencas .acreditamos p {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-left: 12rem;
+    margin-bottom: 1rem;
+    width: 85%;
+}
+
+.caixa-crencas .crencas .acreditamos .ultimo-paragrafo {
+    margin-bottom: 6rem;
+}
+
+
+
+.caixa-valores {
+    background-color: #000;
+    color: #fff;
+}
+
+.caixa-valores .valores .valorizamos {
+    padding-top: 12rem; /* ou ajuste conforme necessário */
+}
+
+.caixa-valores .valores .valorizamos h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 12rem;
+    margin-bottom: 5rem;
+    /* margin-top: 12rem; <- REMOVA ISSO */
+}
+
+.caixa-valores .valores .valorizamos h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    margin-left: 12rem;
+    margin-bottom: 5rem;
+}
+
+.caixa-valores .valores .valorizamos p {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-left: 12rem;
+    margin-bottom: 1rem;
+    width: 85%;
+}
+
+.caixa-valores .valores .valorizamos .ultimo-paragrafo {
+    margin-bottom: 6rem;
+}
+
+.sessao-hr h2 {
+    margin-left: 12rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.sessao-hr h1 {
+    margin-left: 12rem;
+    margin-top: 10rem;
+    margin-bottom: 0rem;
+    font-size: 5.5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+}
+
+.sessao-hr p {
+    margin-left: 12rem;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    font-size: 1.9rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+}
+
+
+
+
+
+
+/* Estilos para o footer */
+.bg-dark {
+    background-color: #000; /* tom escuro */
+}
+
+.text-white {
+    color: #fff;
+    font-size: 2rem;
+    top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+    height: 10rem;
+    font-weight: 300;
+}
+.texto-footer {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Responsividade opcional */
+@media (max-width: 600px) {
+    .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}

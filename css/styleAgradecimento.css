@@ -1,0 +1,81 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container principal */
+.agradecimento-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Caixa de mensagem */
+.mensagem-box {
+  background-color: #ffffff;
+  padding: 4rem 5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Título */
+.mensagem-box h1 {
+  font-size: 3rem;
+  color: #2c2c2c;
+  margin-bottom: 1.5rem;
+}
+
+/* Parágrafos */
+.mensagem-box p {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Botão */
+.botao-voltar {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #8b0000;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.botao-voltar:hover {
+  background-color: #a51212;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .mensagem-box {
+    padding: 3rem 2rem;
+  }
+
+  .mensagem-box h1 {
+    font-size: 2.4rem;
+  }
+
+  .mensagem-box p {
+    font-size: 1.4rem;
+  }
+
+  .botao-voltar {
+    font-size: 1.3rem;
+  }
+}

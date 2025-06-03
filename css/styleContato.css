@@ -1,0 +1,323 @@
+:root {
+    font-size: 10px;
+    --main-color: rgba(167, 12, 12, 0.867);
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Seção do vídeo */
+.img-section {
+    margin-top: 1rem;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.caixa-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.caixa-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: var(--bg);
+    border-bottom: var(--border);
+    width: 100vw;
+}
+
+.header .conteudo-limitado {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.5rem 2rem;
+}
+
+.header a img {
+    height: 6rem;
+    margin-left: -8rem;
+}
+
+.header nav a {
+    position: relative;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    padding-right: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #fff;
+}
+
+.header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+}
+
+.header nav a:hover::after {
+    width: calc(100% - 1.9rem);
+}
+
+/* Centraliza conteúdo abaixo do header */
+.conteudo-limitado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* Seção principal */
+.contato {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos */
+.contato h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #2c2c2c;
+    font-weight: 700;
+}
+
+.contato p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+/* Formulário */
+.formulario {
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Labels e inputs */
+.formulario label {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 1.4rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+    transition: border-color 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #8b0000;
+    outline: none;
+}
+
+/* Botão */
+.formulario button {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 1.6rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #a51212;
+}
+
+/* Mensagem de sucesso/erro */
+#mensagem-resultado {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: green;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .formulario {
+        padding: 2.5rem;
+    }
+
+    .contato h1 {
+        font-size: 3rem;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        font-size: 1.4rem;
+    }
+
+    .formulario button {
+        font-size: 1.4rem;
+    }
+}
+
+.caixa-conectar {
+    background-color: #1c1c1c;
+    color: #fff;
+    margin-top: 10rem;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.titulo-conhecer,
+.titulo-conectar {
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    margin: 0 0 10px;
+}
+
+/* Títulos específicos */
+.titulo-conhecer {
+    font-size: 5rem;
+    font-weight: 400;
+    margin-top: 15rem;
+    margin-left: -70rem;
+}
+
+.titulo-conectar {
+    font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-left: -70rem;
+}
+
+/* Container flex para os últimos títulos e botão */
+.bloco-conectar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Garante que os elementos ocupem a largura disponível */
+    margin: 30px 0;
+    padding: 0 25rem; /* Ajusta a margem de ambos os lados para alinhar com os outros títulos */
+}
+
+.icones-sociais {
+  display: flex;
+  gap: 7rem;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -107rem;
+}
+
+.icones-sociais .icone {
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.icones-sociais .icone:hover {
+  color: #a51212; /* Cor dourada ao passar o mouse */
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+/* Estilos para o footer */
+.bg-dark {
+    margin-top: 0rem;
+    background-color: #000; /* tom escuro */
+}
+
+.text-white {
+    color: #fff;
+    font-size: 2rem;
+    top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+    height: 10rem;
+    font-weight: 300;
+}
+.texto-footer {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Responsividade opcional */
+@media (max-width: 600px) {
+    .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}

@@ -1,0 +1,878 @@
+:root {
+    font-size: 10px;
+    --main-color: rgba(167, 12, 12, 0.867);
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Seção do vídeo */
+.video-section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.caixa-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.caixa-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: var(--bg);
+    border-bottom: var(--border);
+    width: 100vw;
+}
+
+.header .conteudo-limitado {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.5rem 2rem;
+}
+
+.header a img {
+    height: 6rem;
+    margin-left: -8rem;
+}
+
+.header nav a {
+    position: relative;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    padding-right: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #fff;
+}
+
+.header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+}
+
+.header nav a:hover::after {
+    width: calc(100% - 1.9rem);
+}
+
+/* Centraliza conteúdo abaixo do header */
+.conteudo-limitado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* Seção com vídeo */
+.caixa-principal {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.caixa-principal div {
+    max-width: 60rem;
+    margin-left: -14rem;
+}
+
+.caixa-principal div h3 {
+    color: #fff;
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+.caixa-principal div p {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+    margin-bottom: 3.5rem;
+}
+
+/* Botões */
+.botao-link {
+    background-color: var(--black);
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border: none;
+    transition: 0.5s;
+}
+
+.botao-link svg {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+}
+
+.caixa-principal div a:hover {
+    background-color: var(--black);
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+
+.caixa-sobre {
+    padding: 10rem 9%;
+}
+
+.titulo{
+    text-align: center;
+    color: (--black);
+    padding-bottom: 3.5rem;
+    font-size: 4.2rem;
+    font-weight: 450;
+}
+
+.caixa-sobre .sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* CSS */
+.caixa-sobre .sobre-container .sobre-img {
+    flex: 1 1 45rem;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.caixa-sobre .sobre-container .sobre-img.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.caixa-sobre .sobre-container .sobre-img img {
+    width: 100%;
+}
+
+.caixa-sobre .sobre-container .sobre-texto {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.caixa-sobre .sobre-container .sobre-texto h3 {
+    font-size: 3.2rem;
+    color: (--black);
+    font-family: "Playfair Display", serif;
+    font-weight: 550;
+    padding-bottom: 2rem;
+}
+
+.caixa-sobre .sobre-container .sobre-texto p {
+    font-size: 1.6rem;
+    color: (--black);
+    line-height: 1.8;
+    padding: 1rem 0;
+    padding-bottom: 2rem;
+}
+
+.caixa-sobre .sobre-container .sobre-texto a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+    text-underline-offset: 1rem;
+    text-decoration-color: var(--main-color);
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: (--black);
+}
+
+.caixa-ministerio {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #000;
+}
+
+/* Conteúdo geral */
+.ministerio-conteudo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título "MINISTÉRIOS" no topo esquerdo */
+.titulo-secao-ministerio {
+    position: absolute;
+    top: 2rem;
+    left: 8rem;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 13rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+}
+
+/* Título principal centralizado */
+.titulo-ministerio {
+    /* text-align: center; */
+    font-size: 7.1rem;
+    font-weight: 400;
+    max-width: 90%;
+    /* margin: 8rem auto 3rem auto;  */
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    position: relative;
+    top: 30rem; /* Desce o título visualmente sem afetar os outros elementos */
+    z-index: 2;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    left: 4rem;
+}
+
+/* Imagens circulares */
+.ministerio-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    top: -3rem;
+}
+
+.ministerio-img img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Estado inicial: fora da tela */
+.ministerio-img .img1,
+.ministerio-img .img2 {
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* img1: entra da direita para onde ela já estaria (translateX(40px)) */
+.ministerio-img .img1 {
+    transform: translateX(100%);
+}
+
+/* img2: entra da esquerda para onde ela já estaria (translateX(-40px)) */
+.ministerio-img .img2 {
+    transform: translateX(-100%);
+}
+
+/* Estado final: volta à posição definida no layout */
+.ministerio-img .img1.animate {
+    transform: translateX(40px);
+    opacity: 1;
+}
+
+.ministerio-img .img2.animate {
+    transform: translateX(-40px);
+    opacity: 1;
+}
+
+/* Botão no canto inferior esquerdo */
+.botao-conecte {
+    position: absolute;
+    bottom: 2rem;
+    left: 8rem;
+    top: 64rem;
+}
+
+/* Reutilizando botao-link padrão */
+/* Estado inicial: fora da tela à direita */
+.botao-link-conecte {
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--black);
+    padding: 1.5rem 2rem;
+    border: none;
+
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Estado final: posição normal */
+.botao-link-conecte.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.botao-link-conecte svg {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+}
+
+.botao-link-conecte:hover {
+    background-color: #000;
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+
+.horarios {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9; 
+    margin-top: 8rem;/* Pode mudar para transparente ou com imagem se necessário */
+}
+
+.titulo-secao-horarios {
+    font-size: 7rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding-right: 70rem;
+}
+
+.horarios-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; /* Espaço entre as imagens */
+    flex-wrap: wrap; /* Permite que em telas menores elas fiquem empilhadas */
+    margin-bottom: 2rem;
+}
+
+.horarios-img img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    /* Animação inicial */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 3s ease-out, opacity 2s ease-out;
+}
+
+/* Estado final após aparecer */
+.horarios-img img.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Texto abaixo das imagens */
+.horarios h4 {
+    font-size: 2.8rem;
+    margin-top: 0rem;
+    color: var(--black);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0rem;
+    line-height: 1.6;   
+    padding-left: 60rem;
+    margin-top: -2rem;
+}
+
+/* Botão centralizado */
+.botao-horarios {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.botao-link-horarios {
+    background-color: var(--black);
+    cursor: pointer;
+    margin-right: 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border: none;
+
+    /* Animação */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.botao-link-horarios.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.botao-link-horarios svg {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+}
+
+.botao-link-horarios:hover {
+    background-color: var(--black);
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+
+.caixa-escola {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    background-color: #000;
+    margin-top: 8rem;
+}
+
+/* Conteúdo geral */
+.escola-conteudo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título "MINISTÉRIOS" no topo esquerdo */
+.titulo-secao-escola {
+    position: absolute;
+    top: 2rem;
+    left: 8rem;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 13rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+}
+
+/* Título principal centralizado */
+.titulo-escola {
+    font-size: 6.9rem;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    top: 35rem; 
+    z-index: 3;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    left: 4rem;
+}
+
+.subtitulo-escola {
+    font-size: 7rem;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    top: 35rem; 
+    z-index: 3;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    left: 4rem;
+     font-family: "Playfair Display", serif;
+}
+/* Imagens circulares */
+.escola-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    left: 5rem;
+}
+
+.escola-img img {
+    width: 850px;
+    height: 530px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 6rem;
+    border-radius: 9px;
+}
+
+.escola-img .img-escola {
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Estado final após aparecer */
+.escola-img .img-escola.animate {
+    transform: translateX(40px); /* Posição definida no layout */
+    opacity: 1;
+}
+
+
+/* Botão no canto inferior esquerdo */
+.botao-escola {
+    position: absolute;
+    bottom: 2rem;
+    left: 8rem;
+    top: 60rem;
+}
+
+/* Reutilizando botao-link padrão */
+.botao-link-escola {
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--black);
+    padding: 1.5rem 2rem;
+    border: none;
+
+    /* Animação inicial */
+    opacity: 0;
+    transform: translateX(100%); /* Começa fora da tela à direita */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Quando o botão entra na tela */
+.botao-link-escola.animate {
+    transform: translateX(0); /* Volta à posição original */
+    opacity: 1;
+}
+
+
+.botao-link-escola svg {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+}
+
+.botao-link-escola:hover {
+    background-color: #000;
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+
+/* Container principal da seção */
+.caixa-calendario {
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* cor de fundo suave */
+}
+
+/* Flex container para alinhar imagem e texto lado a lado */
+.calendario-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* permite quebrar em telas menores */
+}
+
+/* Imagem */
+.calendario-img img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8rem;
+
+  /* Animação inicial */
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Quando visível na tela */
+.calendario-img img.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Texto ao lado da imagem */
+.calendario-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.titulo-eventos {
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-style: bold;
+  margin-top: 10rem;
+}
+
+.titulo-calendario {
+  font-size: 70px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.texto-eventos {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: var(--black);
+}
+
+.texto-calendario {
+  font-size: 20px;
+  font-weight: 350;
+  margin-top: 10px;
+  color: #818080;
+  margin-bottom: 20px;
+}
+
+.botao-link-calendario {
+    background-color: var(--black);
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border: none;
+
+    /* Animação inicial */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Estado final ao entrar na tela */
+.botao-link-calendario.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.botao-link-calendario svg {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+}
+
+.botao-link-calendario:hover {
+    background-color: var(--black);
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+}
+
+.caixa-conectar {
+    background-color: #1c1c1c;
+    color: #fff;
+    margin-top: 10rem;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Textos */
+.titulo-conhecer,
+.titulo-conectar,
+.titulo-parte {
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    margin: 0 0 10px;
+}
+
+/* Títulos específicos */
+.titulo-conhecer {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 15rem;
+    margin-left: -54rem;
+}
+
+.titulo-conectar {
+    font-size: 4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-left: -54rem;
+}
+
+.titulo-parte {
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    margin-top: -2rem;
+}
+
+/* Container flex para os últimos títulos e botão */
+.bloco-conectar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Garante que os elementos ocupem a largura disponível */
+    margin: 30px 0;
+    padding: 0 25rem; /* Ajusta a margem de ambos os lados para alinhar com os outros títulos */
+}
+
+/* Botão */
+.botao-link-conectar {
+    background-color: #000;
+    color:  #FFF; /* fallback */
+    font-size: 1.7rem;
+    padding: 1.5rem 6rem;
+    margin-top: -2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.botao-link-conectar svg {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    font-size: large;
+    font-weight: bold;
+}
+
+.botao-link-conectar:hover {
+    background-color: #1c1c1c;
+    color: var(--main-color); /* Cor de fallback */
+    border-radius: 10px;
+    padding: 1.5rem 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para o footer */
+.bg-dark {
+    margin-top: 0rem;
+    background-color: #000; /* tom escuro */
+}
+
+.text-white {
+    color: #fff;
+    font-size: 2rem;
+    top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+    height: 10rem;
+    font-weight: 300;
+}
+.texto-footer {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Responsividade opcional */
+@media (max-width: 600px) {
+    .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
