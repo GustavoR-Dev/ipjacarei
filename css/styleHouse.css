@@ -89,6 +89,61 @@ html, body {
     padding: 3rem 2rem;
 }
 
+/* Botão do menu hamburguer (mobile) */
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 3rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Estilo padrão do menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header .conteudo-limitado {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        display: none;
+    }
+
+    .menu a {
+        padding: 1rem 0;
+        font-size: 1.6rem;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .header a img {
+        margin-left: 0;
+    }
+}
+
 .sessao-generosidade {
     background-color: #644528;
     height: auto; /* ou ajuste conforme o conteúdo */
