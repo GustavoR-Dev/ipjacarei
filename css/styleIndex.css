@@ -218,12 +218,49 @@ html, body {
     padding: 1.5rem 3rem;
 }
 
+@media (max-width: 768px) {
+    .caixa-principal {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .caixa-principal div {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .caixa-principal div h3 {
+        font-size: 3.5rem;
+    }
+
+    .caixa-principal div p {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .botao-link {
+        font-size: 1.4rem;
+        padding: 1rem 1.5rem;
+        margin-right: 1rem;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .botao-link svg {
+        margin-left: 0.5rem;
+    }
+}
+
 .caixa-sobre {
     padding: 10rem 9%;
 }
 
 .titulo{
-    text-align: center;
     color: (--black);
     padding-bottom: 3.5rem;
     font-size: 4.2rem;
@@ -438,6 +475,72 @@ html, body {
     padding: 1.5rem 3rem;
 }
 
+@media (max-width: 768px) {
+    .caixa-ministerio {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .ministerio-conteudo {
+        padding: 2rem 1rem;
+        height: auto;
+        align-items: center;
+    }
+
+    .titulo-secao-ministerio {
+        position: static;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        left: 0;
+    }
+
+    .titulo-ministerio {
+        font-size: 3rem;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        margin: 1rem 0 2rem;
+        text-align: center;
+    }
+
+    .ministerio-img {
+        gap: 2rem;
+        top: 0;
+    }
+
+    .ministerio-img img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Caso deseje esconder imagens no mobile, ative essa regra */
+    /*
+    .ministerio-img {
+        display: none;
+    }
+    */
+
+    .botao-conecte {
+        position: static;
+        top: 0;
+        left: 0;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .botao-link-conecte {
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
 .horarios {
     padding: 6rem 2rem;
     text-align: center;
@@ -536,6 +639,30 @@ html, body {
     color: var(--main-color);
     border-radius: 10px;
     padding: 1.5rem 3rem;
+}
+
+@media (max-width: 768px) {
+    .caixa-horarios {
+        height: auto;
+        padding: 2rem;
+        text-align: center;
+    }
+    .botao-horarios {
+        position: static;
+        top: 0;
+        left: 0;
+        margin-top: -20rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .botao-link-horarios {
+        font-size: 1.5rem;
+        padding: 1rem 1.1rem;
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+    }
 }
 
 .caixa-escola {
@@ -681,6 +808,101 @@ html, body {
     border-radius: 10px;
     padding: 1.5rem 3rem;
 }
+
+@media (max-width: 768px) {
+    .caixa-escola {
+        height: auto;
+        padding: 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .escola-conteudo {
+        padding: 0;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .titulo-secao-escola {
+        position: absolute;
+        top: 1rem;
+        left: 1.5rem;
+        font-size: 1.5rem;
+        margin-top: 0;
+        z-index: 3;
+    }
+
+    .titulo-escola {
+        font-size: 2.6rem;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        text-align: center;
+        width: 90%;
+        padding: 0 1rem;
+    }
+
+    .subtitulo-escola {
+        font-size: 3rem;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        text-align: center;
+        width: 90%;
+        padding: 0 1rem;
+    }
+
+    .escola-img {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+        left: 0;
+        z-index: 1;
+    }
+
+    .escola-img img {
+        width: 95%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+
+    .botao-escola {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 2rem;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .botao-link-escola {
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
 
 /* Container principal da seção */
 .caixa-calendario {
@@ -877,6 +1099,54 @@ html, body {
     padding: 1.5rem 4rem;
 }
 
+@media (max-width: 768px) {
+  .caixa-conectar {
+    padding: 4rem 1.5rem;
+    height: auto;
+    margin-top: 5rem;
+    /* align-items: center;
+    text-align: center; */
+  }
+
+  .titulo-conhecer {
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+    margin-left: -20rem;
+  }
+
+  .titulo-conectar {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    margin-left: -18rem;
+  }
+
+  .titulo-parte {
+    font-size: 2.8rem;
+    margin: 2rem 0;
+  }
+
+  .bloco-conectar {
+    flex-direction: column;
+    align-items: center; 
+    padding: 0;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .botao-link-conectar {
+    font-size: 1.7rem;
+    padding: 1.2rem 2rem;
+    margin-top: 0;
+    width: 90%;
+    max-width: 200px;
+    justify-content: center;
+    margin-left: -20rem;
+  }
+
+  .botao-link-conectar:hover {
+    padding: 1.2rem 2rem;
+  }
+}
 
 
 
