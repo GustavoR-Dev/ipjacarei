@@ -222,6 +222,7 @@ html, body {
 @media (max-width: 768px) {
   /* Ajuste da seção .sessao-name */
   .sessao-name {
+    margin-top: 1rem;
     height: auto;
     padding: 4rem 2rem;
     text-align: center;
@@ -229,7 +230,8 @@ html, body {
 
   .escola-name h1 {
     font-size: 3rem;
-    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
   }
 
   /* Ajuste da seção .voluntario */

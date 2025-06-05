@@ -163,6 +163,22 @@ html, body {
     font-family: "Playfair Display", serif;
 }
 
+@media (max-width: 768px) {
+  /* Ajuste da seção .sessao-name */
+  .sessao-name {
+    margin-top: 1rem;
+    height: auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .testemunhos-name h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .dropdown {
     position: relative;
 }
@@ -281,6 +297,41 @@ hr {
     max-width: 80%;
 }
 
+@media (max-width: 768px) {
+  .sessao-testemunhos {
+    padding: 3rem 1.5rem;
+  }
+
+  .testemunhos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-testemunho {
+    padding: 1.8rem;
+  }
+
+  .card-testemunho h3 {
+    font-size: 1.6rem;
+  }
+
+  .card-testemunho h4 {
+    font-size: 1.2rem;
+  }
+
+  .card-testemunho h1 {
+    font-size: 1.8rem;
+  }
+
+  .card-testemunho p {
+    font-size: 1.4rem;
+  }
+
+  hr {
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+}
 
 
 
