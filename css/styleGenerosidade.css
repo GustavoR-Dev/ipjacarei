@@ -220,6 +220,63 @@ html, body {
     border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+  .sessao-generosidade {
+    background-color: #502304;
+    height: auto;
+    min-height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: #fff;
+  }
+
+  .caixa-generosidade {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .generosidade-texto {
+    width: 100%;
+  }
+
+  .generosidade-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .generosidade-texto h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+  }
+
+  .generosidade-texto p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  .botao-link {
+    font-size: 1.4rem;
+    padding: 1.2rem 3rem;
+  }
+
+  .botao-link svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 0.5rem;
+  }
+
+  /* Oculta a imagem no mobile */
+  .generosidade-img {
+    display: none;
+  }
+}
+
 .sessao-ofertar {
     margin-top: 6rem;
     padding: 4rem 2rem;
@@ -376,12 +433,74 @@ html, body {
     font-size: 1.4rem;
 }
 
-.secao-alternada {
-    padding: 4rem 2rem;
-    display: flex;
+@media (max-width: 768px) {
+  .sessao-ofertar {
+    padding: 2rem 1rem;
     flex-direction: column;
-    gap: 6rem;
+    min-height: auto;
+  }
+
+  .caixa-ofertar {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ofertar-img {
+    justify-content: center;
+  }
+
+  .ofertar-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .conteudo-ofertar {
+    gap: 2rem;
+  }
+
+  .como-exercer h1 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .participe p {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+
+  .blocos-pretos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .blocos-pretos > div {
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .blocos-pretos h3,
+  .blocos-pretos p {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .banco-pix img {
+    max-width: 120px;
+  }
+
+  .blocos-pretos svg {
+    width: 40px;
+    height: 30px;
+  }
+
+  .AG, .C {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }
+
 
 /* Blocos visuais */
 .bloco {

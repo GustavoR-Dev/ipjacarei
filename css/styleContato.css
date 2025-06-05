@@ -47,6 +47,25 @@ html, body {
     left: 0;
 }
 
+@media (max-width: 768px) {
+  .img-section {
+    height: 50vh; /* Altura reduzida para telas menores */
+  }
+
+  .caixa-img {
+    height: 50vh;
+  }
+
+  .caixa-img img {
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 /* Header fixo */
 .header {
     position: fixed;
@@ -331,6 +350,46 @@ html, body {
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .caixa-conectar {
+    padding: 4rem 2rem;
+    height: auto;
+    margin-top: 6rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .titulo-conhecer {
+    font-size: 2.6rem;
+    margin-top: 4rem;
+    margin-left: 0;
+  }
+
+  .titulo-conectar {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  .bloco-conectar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .icones-sociais {
+    margin-left: 0;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .icones-sociais .icone {
+    width: 36px;
+    height: 36px;
+  }
+}
 
 
 

@@ -47,6 +47,25 @@ html, body {
     left: 0;
 }
 
+@media (max-width: 768px) {
+  .img-section {
+    height: 50vh; /* Altura reduzida para telas menores */
+  }
+
+  .caixa-img {
+    height: 50vh;
+  }
+
+  .caixa-img img {
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 /* Header fixo */
 .header {
     position: fixed;
@@ -728,6 +747,63 @@ html, body {
   margin: 0 -44rem;
   text-align: justify;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .historia {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .subtitulo-historia {
+    font-size: 2.4rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+  .timeline {
+    width: 100%;
+    padding: 0;
+  }
+
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 2rem 2rem 2rem 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item.right,
+  .timeline-item.left {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item .timeline-point {
+    left: 0;
+    top: 10px;
+  }
+
+  .timeline-content {
+    font-size: 1.6rem;
+    transform: none;
+    opacity: 1;
+  }
+
+  .paragrafo-right,
+  .paragrafo-left {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    font-size: 1.4rem;
+    text-align: justify;
+    line-height: 1.5;
+  }
 }
 
 .mais-sobre-ip .mais-sobre {

@@ -219,6 +219,59 @@ html, body {
     background-color: #3b3837;
 }
 
+@media (max-width: 768px) {
+  /* Ajuste da seção .sessao-name */
+  .sessao-name {
+    height: auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .escola-name h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Ajuste da seção .voluntario */
+  .voluntario {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+
+  .img-voluntario img {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sobre-criancas {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-criancas h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .sobre-criancas p {
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+
+  .botao-link-voluntario {
+    font-size: 1.4rem;
+    padding: 1.5rem 3rem;
+  }
+}
+
+
 .sessao-primeiros-passos {
   background-color: #000;
   color: #fff;
@@ -265,21 +318,40 @@ html, body {
   color: #fff;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
+  .sessao-primeiros-passos {
+    padding: 3rem 1.5rem;
+  }
+
   .container-primeiros-passos {
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 2rem;
   }
 
   .imagem-primeiros-passos img {
+    display: none;
+  }
+
+  .conteudo-primeiros-passos {
+    text-align: left;
     width: 100%;
   }
+
+  .conteudo-primeiros-passos h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .conteudo-primeiros-passos p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
 }
-
-
-
-
 
 
 /* Seção de ministérios geral */
@@ -389,6 +461,10 @@ html, body {
     background-color: #1c1fa7;
 }
 
+.caixa-homens {
+    background-color: #ad390b;
+}
+
 .botao-contato {
     display: inline-block;
     padding: 12px 28px;
@@ -469,6 +545,26 @@ html, body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+.botao-contato-homens {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #ad390b,#91330e);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.botao-contato-homens:hover {
+    background: linear-gradient(135deg,  #ad390b,#91330e);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .sessao-ministerios h1 {
@@ -481,5 +577,47 @@ html, body {
 
     .sessao-ministerios .conteudo {
         grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+/* Estilos para o footer */
+.bg-dark {
+    margin-top: 0rem;
+    background-color: #000; /* tom escuro */
+}
+
+.text-white {
+    color: #fff;
+    font-size: 2rem;
+    top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+    height: 10rem;
+    font-weight: 300;
+}
+.texto-footer {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Responsividade opcional */
+@media (max-width: 600px) {
+    .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
