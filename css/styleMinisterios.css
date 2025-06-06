@@ -163,6 +163,22 @@ html, body {
     font-family: "Playfair Display", serif;
 }
 
+@media (max-width: 768px) {
+  /* Ajuste da seção .sessao-name */
+  .sessao-name {
+    margin-top: 1rem;
+    height: auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .escola-name h1 {
+    font-size: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
 /* Seção de ministérios geral */
 .sessao-ministerios {
     padding: 60px 40px;
@@ -267,5 +283,47 @@ html, body {
 
     .sessao-ministerios .conteudo {
         grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+/* Estilos para o footer */
+.bg-dark {
+    margin-top: 0rem;
+    background-color: #000; /* tom escuro */
+}
+
+.text-white {
+    color: #fff;
+    font-size: 2rem;
+    top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+    height: 10rem;
+    font-weight: 300;
+}
+.texto-footer {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Responsividade opcional */
+@media (max-width: 600px) {
+    .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }

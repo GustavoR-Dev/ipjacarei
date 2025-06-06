@@ -852,35 +852,19 @@ html, body {
 
     .titulo-secao-escola {
         position: absolute;
-        top: 1rem;
+        top: 2.5rem;
         left: 1.5rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-top: 0;
         z-index: 3;
     }
 
     .titulo-escola {
-        font-size: 2.6rem;
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 3;
-        text-align: center;
-        width: 90%;
-        padding: 0 1rem;
+        display: none;
     }
 
     .subtitulo-escola {
-        font-size: 3rem;
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 3;
-        text-align: center;
-        width: 90%;
-        padding: 0 1rem;
+        display: none;
     }
 
     .escola-img {
@@ -891,7 +875,7 @@ html, body {
         align-items: center;
         margin-top: 10rem;
         margin-bottom: 2rem;
-        left: 0;
+        margin-left: -18rem;
         z-index: 1;
     }
 
@@ -961,6 +945,12 @@ html, body {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .calendario-img {
+        display: none;
+    }
+}
+
 /* Texto ao lado da imagem */
 .calendario-texto {
   flex: 1;
@@ -974,7 +964,7 @@ html, body {
   margin-bottom: 20px;
   font-size: 1.6rem;
   font-style: bold;
-  margin-top: 10rem;
+  margin-top: 4rem;
 }
 
 .titulo-calendario {

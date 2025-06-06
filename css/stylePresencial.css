@@ -163,11 +163,20 @@ html, body {
     font-family: "Playfair Display", serif;
 }
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media (max-width: 768px) {
+  /* Ajuste da seção .sessao-name */
+  .sessao-name {
+    margin-top: 1rem;
+    height: auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .escola-name h1 {
+    font-size: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
 }
 
 /* Seção com fundo em degradê escuro */
@@ -270,22 +279,88 @@ html, body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
-    .caixa-horarios .conteudo-central {
-        flex-direction: column;
-        align-items: center;
-    }
+  .caixa-horarios::before {
+    left: 20px; /* posiciona a linha vertical mais à esquerda */
+  }
 
-    .caixa-horarios h1 {
-        align-self: center;
-        text-align: center;
-    }
+  .caixa-horarios > div:not([class*="img-"]) {
+    padding-left: 40px;
+  }
 
-    .caixa-horarios::before {
-        left: 10px;
-    }
+  .caixa-horarios h1 {
+    font-size: 4rem;
+  }
+
+  .caixa-horarios h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .caixa-horarios h3 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .caixa-horarios h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .caixa-horarios p {
+    font-size: 1.4rem;
+  }
+
+  .caixa-horarios .conteudo-central {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .caixa-horarios .conteudo-texto {
+    margin-left: 0;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .caixa-horarios img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }
+
+@media (max-width: 480px) {
+  .sessao-programacao {
+    padding: 40px 10px;
+  }
+
+  .caixa-horarios::before {
+    display: none; /* esconde a linha vertical em telas muito pequenas */
+  }
+
+  .caixa-horarios h1 {
+    font-size: 3rem;
+  }
+
+  .caixa-horarios h2,
+  .caixa-horarios h3 {
+    font-size: 2.4rem;
+  }
+
+  .caixa-horarios h4 {
+    font-size: 1.8rem;
+  }
+
+  .caixa-horarios p {
+    font-size: 1.2rem;
+  }
+
+  .caixa-horarios img {
+    width: 100%;
+  }
+}
+
 
 .sessao-botoes {
     max-width: 850px;
@@ -335,17 +410,51 @@ html, body {
     font-size: 2rem;
 }
 
+@media (max-width: 768px) {
+  .sessao-botoes {
+    margin: 6rem auto;
+    padding: 0 1rem;
+  }
 
+  .sessao-botoes h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 
+  .toggle-btn,
+  .conteudo {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 12px 16px;
+  }
 
+  .toggle-btn svg {
+    width: 20px;
+    height: 20px;
+  }
 
+  .conteudo {
+    font-size: 1.5rem;
+  }
+}
 
+@media (max-width: 480px) {
+  .sessao-botoes h1 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
 
+  .toggle-btn,
+  .conteudo {
+    font-size: 1.4rem;
+    padding: 10px 14px;
+  }
 
-
-
-
-
+  .conteudo p {
+    margin-bottom: 1.5rem;
+  }
+}
 
 .caixa-conectar {
     background-color: #1c1c1c;
@@ -413,7 +522,46 @@ html, body {
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .caixa-conectar {
+    padding: 4rem 2rem;
+    height: auto;
+    margin-top: 6rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
+  .titulo-conhecer {
+    font-size: 2.6rem;
+    margin-top: 4rem;
+    margin-left: 0;
+  }
+
+  .titulo-conectar {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  .bloco-conectar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .icones-sociais {
+    margin-left: 0;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .icones-sociais .icone {
+    width: 36px;
+    height: 36px;
+  }
+}
 
 
 
