@@ -264,27 +264,27 @@ html, body {
   }
 
   .titulo-missao {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top: 6rem;
     margin-bottom: 2rem;
     text-align: center;
   }
 
   .texto-expansao {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     margin-top: 1rem;
     margin-left: 1rem;
     text-align: left;
   }
 
   .texto-expansao-baixo {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     margin-left: 2rem;
     text-align: left;
   }
 
   .texto-reino {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     margin-top: 2rem;
     margin-left: auto;
     margin-right: 2rem;
@@ -292,14 +292,14 @@ html, body {
   }
 
   .texto-reino-baixo {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     margin-left: auto;
     margin-right: 3rem;
     text-align: right;
   }
 
   .texto-reino-baixo-baixo {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     margin-left: auto;
     margin-right: 1.5rem;
     text-align: right;
@@ -522,27 +522,27 @@ html, body {
   }
 
   .titulo-visao {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top: 6rem;
     margin-bottom: 2rem;
     text-align: center;
   }
 
   .texto-impactar {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-top: 1rem;
     margin-left: 1rem;
     text-align: left;
   }
 
   .texto-impactar-baixo {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-left: 1rem;
     text-align: left;
   }
 
   .texto-revelar {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-top: 2rem;
     margin-left: auto;
     margin-right: 2rem;
@@ -550,21 +550,21 @@ html, body {
   }
 
   .texto-revelar-baixo {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-left: auto;
     margin-right: 2.2rem;
     text-align: right;
   }
 
   .texto-experiencia {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-top: 1rem;
     margin-left: 1rem;
     text-align: left;
   }
 
   .texto-experiencia-baixo {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-left: 1rem;
     text-align: left;
   }

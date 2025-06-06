@@ -163,6 +163,22 @@ html, body {
     font-family: "Playfair Display", serif;
 }
 
+@media (max-width: 768px) {
+  /* Ajuste da seção .sessao-name */
+  .sessao-name {
+    margin-top: 1rem;
+    height: auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .escola-name h1 {
+    font-size: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
 .sessao-escola {
     height: auto; /* ou ajuste conforme o conteúdo */
     min-height: 100vh;
@@ -232,6 +248,62 @@ html, body {
     border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+    .sessao-escola {
+        margin-top: -12rem;
+        padding: 2rem 1rem;
+    }
+
+    .caixa-escola {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .escola-texto h1 {
+      margin-top: -4rem;
+        font-size: 4rem;
+    }
+
+    .escola-texto p {
+        font-size: 1.8rem;
+    }
+
+    .botao-link {
+        font-size: 1.4rem;
+        padding: 1.4rem 3rem;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .escola-img {
+        justify-content: center;
+    }
+
+    .escola-img img {
+        margin-top: 4rem;
+        margin-bottom: -18rem;
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .escola-texto h1 {
+        font-size: 3rem;
+    }
+
+    .escola-texto p {
+        font-size: 1.6rem;
+    }
+
+    .botao-link {
+        font-size: 1.2rem;
+        padding: 1.2rem 2.5rem;
+    }
+}
+
+
 .sessao-escola-reino {
   background-color: #000;
   color: #fff;
@@ -277,17 +349,48 @@ html, body {
   color: #ccc;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
+  .sessao-escola-reino {
+    height: auto;
+    padding: 3rem 1.5rem;
+  }
+
   .container-escola-reino {
     flex-direction: column;
+    gap: 2rem;
+    align-items: center;
     text-align: center;
   }
 
   .imagem-escola-reino img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .conteudo-escola-reino h1 {
+    font-size: 3rem;
+  }
+
+  .conteudo-escola-reino p {
+    font-size: 1.4rem;
   }
 }
+
+@media (max-width: 480px) {
+  .conteudo-escola-reino h1 {
+    font-size: 2.4rem;
+  }
+
+  .conteudo-escola-reino p {
+    font-size: 1.3rem;
+  }
+
+  .sessao-escola-reino {
+    padding: 2rem 1rem;
+  }
+}
+
 
 .sessao-equipe {
   background-color: #f4f4f4;
@@ -342,18 +445,55 @@ html, body {
   margin-bottom: 0.5rem;
 }
 
-/* Responsivo */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+  .sessao-equipe h1 {
+    margin: 5rem 0 2rem;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .container-equipe {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .card-membro {
-    width: calc(50% - 1.5rem);
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .card-membro h2 {
+    font-size: 1.6rem;
+  }
+
+  .card-membro p {
+    font-size: 1.3rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  .sessao-equipe {
+    padding: 3rem 1rem;
+  }
+
+  .sessao-equipe h1 {
+    font-size: 2rem;
+  }
+
   .card-membro {
-    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .card-membro h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-membro p {
+    font-size: 1.2rem;
   }
 }
+
 
 .sessao-faca-parte {
   background-color: #000;
