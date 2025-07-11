@@ -219,6 +219,48 @@ html, body {
   margin-left: 8px;
 }
 
+@media (max-width: 768px) {
+  .caixa-proximo-evento {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .caixa-proximo-evento img {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    border-right: none;
+    border-bottom: 5px solid #fff;
+  }
+
+  .caixa-info-proximo {
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .caixa-info-proximo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .caixa-info-proximo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .caixa-info-proximo p {
+    font-size: 1.2rem;
+  }
+
+  .botao-link-eventos {
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+
 .calendario-anual {
   background-color: #f9f9f9;
   padding: 40px 20px;

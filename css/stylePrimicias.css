@@ -224,6 +224,61 @@ html, body {
     margin-left: 95rem;
 }
 
+@media (max-width: 768px) {
+  .sessao-generosidade {
+    width: 100vw;
+    padding: 2rem 1rem;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .caixa-generosidade {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .generosidade-img {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .generosidade-img img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .generosidade-texto {
+    text-align: left;
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .generosidade-texto h1 {
+    text-align: left;
+    margin: 5rem auto 3rem auto;
+    width: 100%;
+    font-size: 5rem;
+  }
+
+  .generosidade-texto p {
+    text-align: left;
+    margin: 0 auto 3rem auto;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .botao-link {
+    text-align: left;
+    margin: 0 0;
+    padding: 1.2rem 3rem;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .voluntario {
     background-color: #fff;
     color: #000;
@@ -280,6 +335,53 @@ html, body {
     background-color: #887c15;
 }
 
+@media (max-width: 768px) {
+  .voluntario {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .img-voluntario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-voluntario img {
+    margin-left: 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .sobre-criancas {
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .sobre-criancas h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .sobre-criancas p {
+    font-size: 1.4rem;
+    width: 100%;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+
+  .botao-link-voluntario {
+    margin: 0 auto;
+    font-size: 1.4rem;
+    padding: 1.2rem 3rem;
+  }
+}
+
 .sessao-primeiros-passos {
   background-color: #000;
   color: #fff;
@@ -328,13 +430,38 @@ html, body {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  .sessao-primeiros-passos {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
   .container-primeiros-passos {
     flex-direction: column;
-    text-align: center;
+    gap: 2rem;
+    align-items: center;
   }
 
   .imagem-primeiros-passos img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .conteudo-primeiros-passos {
+    width: 100%;
+    text-align: center;
+  }
+
+  .conteudo-primeiros-passos h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .conteudo-primeiros-passos p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -392,15 +519,52 @@ html, body {
 }
 
 /* Responsivo */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+  .sessao-equipe h1 {
+    margin: 5rem 0 2rem;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .container-equipe {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .card-membro {
-    width: calc(50% - 1.5rem);
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .card-membro h2 {
+    font-size: 1.6rem;
+  }
+
+  .card-membro p {
+    font-size: 1.3rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  .sessao-equipe {
+    padding: 3rem 1rem;
+  }
+
+  .sessao-equipe h1 {
+    font-size: 2rem;
+  }
+
   .card-membro {
-    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .card-membro h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-membro p {
+    font-size: 1.2rem;
   }
 }
 

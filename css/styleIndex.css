@@ -48,15 +48,15 @@ html, body {
 
 @media (max-width: 768px) {
   .video-section {
-    height: 50vh; /* Altura reduzida para telas menores */
+    height: 100vh; /* Mantém o vídeo ocupando toda a altura da tela */
   }
 
   .caixa-video {
-    height: 50vh;
+    height: 100vh;
   }
 
   .caixa-video video {
-    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    object-fit: cover;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -239,13 +239,14 @@ html, body {
 
 @media (max-width: 768px) {
     .caixa-principal {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   /* Centraliza verticalmente */
+        align-items: flex-start;   /* Alinha o conteúdo à esquerda */
         padding: 2rem;
-        margin-top: -15rem;
-        text-align: left;
+        margin: 0;
+        min-height: 100vh;         /* Ocupa toda a altura da tela */
+        text-align: left;          /* Garante alinhamento à esquerda */
     }
 
     .caixa-principal div {
@@ -254,16 +255,16 @@ html, body {
     }
 
     .caixa-principal div h3 {
-        font-size: 3.5rem;
+        font-size: 4.8rem;
     }
 
     .caixa-principal div p {
-        font-size: 1.6rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
     }
 
     .botao-link {
-        font-size: 1.4rem;
+        font-size: 2rem;
         padding: 1rem 1.5rem;
         margin-right: 1rem;
         display: inline-flex;
@@ -275,6 +276,7 @@ html, body {
         margin-left: 0.5rem;
     }
 }
+
 
 .caixa-sobre {
     padding: 10rem 9%;
@@ -345,6 +347,52 @@ html, body {
     font-size: 1.7rem;
     color: (--black);
 }
+
+@media (max-width: 768px) {
+    .caixa-sobre {
+        padding: 5rem 2rem;
+    }
+
+    .titulo {
+        font-size: 3rem;
+        text-align: left;
+        padding-bottom: 2rem;
+    }
+
+    .caixa-sobre .sobre-container {
+        flex-direction: column;
+        align-items: flex-start; /* mantém o alinhamento à esquerda */
+        gap: 2rem;
+    }
+
+    .caixa-sobre .sobre-container .sobre-img {
+        display: none; /* remove a imagem no responsivo */
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto {
+        flex: 1 1 100%;
+        padding: 0;
+        text-align: left;
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto h3 {
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto p {
+        font-size: 1.5rem;
+        padding: 1rem 0 2rem 0;
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto a {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+}
+
+
 
 .caixa-ministerio {
     position: relative;
@@ -500,13 +548,13 @@ html, body {
         flex-direction: column;
         height: auto;
         padding: 2rem;
-        text-align: center;
+        text-align: left;
     }
 
     .ministerio-conteudo {
         padding: 2rem 1rem;
         height: auto;
-        align-items: center;
+        align-items: left;
     }
 
     .titulo-secao-ministerio {
@@ -523,25 +571,21 @@ html, body {
         left: 0;
         max-width: 100%;
         margin: 1rem 0 2rem;
-        text-align: center;
+        text-align: left;
     }
 
     .ministerio-img {
+        display: flex;
         gap: 2rem;
         top: 0;
     }
 
     .ministerio-img img {
-        width: 250px;
+        width: 800px;
         height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
     }
-
-    /* Caso deseje esconder imagens no mobile, ative essa regra */
-    /*
-    .ministerio-img {
-        display: none;
-    }
-    */
 
     .botao-conecte {
         position: static;
@@ -549,17 +593,18 @@ html, body {
         left: 0;
         margin-top: 2rem;
         display: flex;
-        justify-content: center;
+        justify-content: left;
     }
 
     .botao-link-conecte {
         font-size: 1.5rem;
         padding: 1rem 1.5rem;
-        width: 90%;
+        width: 68%;
         max-width: 300px;
-        text-align: center;
+        text-align: left;
     }
 }
+
 
 .horarios {
     padding: 6rem 2rem;

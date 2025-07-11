@@ -48,6 +48,25 @@ html, body {
     left: 0;
 }
 
+@media (max-width: 768px) {
+  .img-section {
+    height: 40vh; /* Altura reduzida para telas menores */
+  }
+
+  .caixa-img {
+    height: 30vh;
+  }
+
+  .caixa-img img {
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 /* Header fixo */
 .header {
     position: fixed;
@@ -189,7 +208,36 @@ html, body {
     margin-bottom: 6rem;
 }
 
+@media (max-width: 768px) {
+  .caixa-crencas .crencas .acreditamos {
+    padding: 0 1.5rem;
+    margin-top: 5rem;
+  }
 
+  .caixa-crencas .crencas .acreditamos h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .caixa-crencas .crencas .acreditamos h1 {
+    font-size: 3rem;
+    margin-left: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .caixa-crencas .crencas .acreditamos p {
+    font-size: 1.7rem;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .caixa-crencas .crencas .acreditamos .ultimo-paragrafo {
+    margin-bottom: 4rem;
+  }
+}
 
 .caixa-valores {
     background-color: #000;
@@ -227,6 +275,35 @@ html, body {
     margin-bottom: 6rem;
 }
 
+@media (max-width: 768px) {
+  .caixa-valores .valores .valorizamos {
+    padding: 5rem 1.5rem 0;
+  }
+
+  .caixa-valores .valores .valorizamos h2 {
+    font-size: 1.2rem;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .caixa-valores .valores .valorizamos h1 {
+    font-size: 3rem;
+    margin-left: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .caixa-valores .valores .valorizamos p {
+    font-size: 1.7rem;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .caixa-valores .valores .valorizamos .ultimo-paragrafo {
+    margin-bottom: 4rem;
+  }
+}
+
 .sessao-hr h2 {
     margin-left: 12rem;
     margin-top: 10rem;
@@ -253,6 +330,35 @@ html, body {
     font-weight: 300;
 }
 
+@media (max-width: 768px) {
+  .sessao-hr {
+    padding: 0 1.5rem;
+  }
+
+  .sessao-hr h2 {
+    margin-left: 0;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .sessao-hr h1 {
+    margin-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    font-weight: 300;
+  }
+
+  .sessao-hr p {
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-size: 1.9rem;
+    font-weight: 300;
+  }
+}
 
 
 
