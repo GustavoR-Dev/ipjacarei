@@ -361,11 +361,11 @@ html, body {
   }
 }
 
-
 .sessao-botoes {
-    max-width: 850px;
-    margin: 12rem 10rem;
-    padding: 0 20px;
+    width: 90%;               /* Ocupa 90% da largura da tela */
+    max-width: 1200px;        /* Limita em telas muito largas */
+    margin: 12rem auto;       /* Centralizado */
+    padding: 0 1rem;          /* Pequeno espaçamento lateral */
     font-family: Arial, sans-serif;
 }
 
@@ -373,13 +373,14 @@ html, body {
     font-size: 4rem;
     font-weight: 500;
     margin-bottom: 6rem;
+    text-align: left;
 }
 
 .toggle-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 170%;
+    width: 100%;
     background-color: #000;
     color: #fff;
     padding: 15px 20px;
@@ -400,7 +401,7 @@ html, body {
 }
 
 .conteudo {
-    width: 170%;
+    width: 100%;
     display: none;
     padding: 15px 20px;
     background-color: #f0f0f0;
@@ -461,26 +462,18 @@ html, body {
     color: #fff;
     margin-top: 10rem;
     width: 100%;
-    height: 60%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: left;
+    padding: 4rem 10rem;
+    box-sizing: border-box;
 }
 
-.titulo-conhecer,
-.titulo-conectar {
-    color: #fff;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
-    margin: 0 0 10px;
-}
-
-/* Títulos específicos */
 .titulo-conhecer {
     font-size: 5rem;
     font-weight: 400;
-    margin-top: 15rem;
-    margin-left: -70rem;
+    margin-top: 10rem;
+    text-align: left;
 }
 
 .titulo-conectar {
@@ -488,73 +481,51 @@ html, body {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     margin-top: 2rem;
-    margin-left: -70rem;
+    text-align: left;
 }
 
-/* Container flex para os últimos títulos e botão */
-.bloco-conectar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; /* Garante que os elementos ocupem a largura disponível */
-    margin: 30px 0;
-    padding: 0 25rem; /* Ajusta a margem de ambos os lados para alinhar com os outros títulos */
-}
-
+/* Ícones sociais */
 .icones-sociais {
-  display: flex;
-  gap: 7rem;
-  margin-top: 3rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: -107rem;
+    display: flex;
+    gap: 4rem;
+    margin-top: 4rem;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
 }
 
 .icones-sociais .icone {
-  color: #ffffff;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
 }
 
 .icones-sociais .icone:hover {
-  color: #a51212; /* Cor dourada ao passar o mouse */
-  transform: scale(1.1);
+    color: #a51212;
+    transform: scale(1.1);
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
   .caixa-conectar {
-    padding: 4rem 2rem;
-    height: auto;
+    padding: 3rem 4rem;
     margin-top: 6rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    text-align: left;
   }
 
   .titulo-conhecer {
     font-size: 2.6rem;
     margin-top: 4rem;
-    margin-left: 0;
   }
 
   .titulo-conectar {
     font-size: 1.8rem;
     margin-top: 1rem;
-    margin-left: 0;
-  }
-
-  .bloco-conectar {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
   }
 
   .icones-sociais {
-    margin-left: 0;
     gap: 2rem;
     margin-top: 2rem;
-    justify-content: center;
   }
 
   .icones-sociais .icone {

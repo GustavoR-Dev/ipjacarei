@@ -384,189 +384,86 @@ html, body {
 }
 
 .visao {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Coloca a imagem atrás do conteúdo */
-}
-
-.visao img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%; /* A imagem tem o dobro da altura da tela para cobrir a rolagem */
-    object-fit: cover;
-    transition: transform 0.1s ease-out; /* Transição suave */
-}
-
-.conteudo-visao {
-    position: relative;
-    z-index: 1; /* Coloca o conteúdo na frente da imagem */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    text-align: center;
-}
-
-.conteudo-visao h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-}
-
-.conteudo-visao p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.visao {
-    background-color: #000;
-    margin: 6rem 0;
-    padding: 4rem 2rem;
-    text-align: center;
-    position: relative;
-    height: 100%;
-    width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 8rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .titulo-visao {
-    font-size: 6.5rem;
-    font-weight: 500;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    color: #fff; 
-    margin-top: 10rem;
+  font-size: 6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  color: #fff;
 }
 
-/* Expansão: abaixo e levemente à esquerda do h1 */
-.texto-impactar {
-    font-size: 3rem;
-    font-weight: 300;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    margin-left: -52%;
-    margin-bottom: -1rem;
-    color: #fff; 
-}
-
-.texto-impactar-baixo {
-    font-size: 3rem;
-    font-weight: 300;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
-    margin-top: -1rem;
-    margin-left: -59%;
-    color: #fff; 
-}
-
-/* Reino: abaixo do texto-expansao, levemente à direita */
-.texto-revelar {
-    font-size: 3rem;
-    font-weight: 300;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    margin-bottom: -1rem;
-    margin-left: 55%;
-    color: #fff; 
-}
-
-.texto-revelar-baixo {
-    font-size: 3rem;
-    font-weight: 300;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
-    margin-top: -1rem;
-    margin-bottom: -1rem;
-    margin-left: 55%;
-    color: #fff; 
-}
-
+/* Textos à esquerda */
+.texto-impactar,
+.texto-impactar-baixo,
 .texto-experiencia {
-    font-size: 3rem;
-    font-weight: 300;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    margin-left: -58%;
-    margin-bottom: -1rem;
-    color: #fff; 
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
 }
 
 .texto-experiencia-baixo {
-    font-size: 3rem;
-    font-weight: 300;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
-    margin-top: -1rem;
-    margin-left: -42%;
-    color: #fff; 
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-bottom: 8rem; /* <-- aqui aumenta a distância final */
 }
 
-@media (max-width: 768px) {
-  .visao {
-    padding: 2rem;
-    margin: 4rem 0;
-    text-align: left; /* Base padrão, individualmente alteramos */
-    height: auto;
-  }
+/* Textos à direita */
+.texto-revelar,
+.texto-revelar-baixo {
+  text-align: right;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
 
+/* Responsivo */
+@media (max-width: 768px) {
   .titulo-visao {
     font-size: 4rem;
-    margin-top: 6rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    margin-bottom: 3rem;
   }
 
-  .texto-impactar {
-    font-size: 2.3rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    text-align: left;
-  }
-
-  .texto-impactar-baixo {
-    font-size: 2.3rem;
-    margin-left: 1rem;
-    text-align: left;
-  }
-
-  .texto-revelar {
-    font-size: 2.3rem;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: 2rem;
-    text-align: right;
-  }
-
+  .texto-impactar,
+  .texto-impactar-baixo,
+  .texto-experiencia,
+  .texto-experiencia-baixo,
+  .texto-revelar,
   .texto-revelar-baixo {
-    font-size: 2.3rem;
-    margin-left: auto;
-    margin-right: 2.2rem;
-    text-align: right;
-  }
-
-  .texto-experiencia {
-    font-size: 2.3rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    text-align: left;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
   }
 
   .texto-experiencia-baixo {
-    font-size: 2.3rem;
-    margin-left: 1rem;
-    text-align: left;
+    margin-bottom: 8rem; /* espaço final em telas pequenas */
   }
 }
 
@@ -714,41 +611,69 @@ html, body {
   right: -7px;
 }
 
-/* .timeline-content */
+/* Timeline content */
 .timeline-content {
   background: none;
   color: #000;
   font-family: Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
-  opacity: 0;  /* Inicialmente invisível */
-  transform: translateX(100%);  /* Inicialmente fora da tela */
-  transition: transform 1s ease-out, opacity 1s ease-out;  /* Transição suave */
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .timeline-content.visible {
   opacity: 1;
-  transform: translateX(0);  /* Movendo para a posição original */
+  transform: translateX(0);
 }
 
-/* .paragrafo-right */
+/* Parágrafos padrão para telas grandes */
 .paragrafo-right {
   font-size: 1.8rem;
-  width: 300%;
-  margin: 0 auto;
-  text-align: justify;
+  max-width: 1000px;
+  width: 250%;
+  margin-left: 0;
+  margin-top: 1rem;
+  text-align: left;
   line-height: 1.6;
 }
 
-/* .paragrafo-left */
 .paragrafo-left {
   font-size: 1.8rem;
-  width: 300%;
-  margin: 0 -44rem;
-  text-align: justify;
+  max-width: 1000px;
+  width: 250%;
+  margin-left: -150%;
+  margin-top: 1rem;
+  text-align: left;
   line-height: 1.6;
 }
 
+/* ✅ Ajuste para 769px até 868px */
+@media (min-width: 769px) and (max-width: 868px) {
+  .paragrafo-right {
+    width: 150%;
+  }
+
+  .paragrafo-left {
+    width: 150%;
+    margin-left: -100%;
+  }
+}
+
+/* ✅ Ajuste para 869px até 1189px */
+@media (min-width: 869px) and (max-width: 1189px) {
+  .paragrafo-right {
+    width: 180%;
+  }
+
+  .paragrafo-left {
+    width: 180%;
+    margin-left: -80%;
+  }
+}
+
+/* 📱 Responsivo para mobile (até 768px) */
 @media (max-width: 768px) {
   .historia {
     font-size: 1.6rem;
@@ -798,9 +723,9 @@ html, body {
 
   .paragrafo-right,
   .paragrafo-left {
+    font-size: 1.4rem;
     width: 100%;
     margin: 1rem 0 0 0;
-    font-size: 1.4rem;
     text-align: justify;
     line-height: 1.5;
   }

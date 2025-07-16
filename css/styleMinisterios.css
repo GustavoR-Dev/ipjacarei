@@ -241,7 +241,7 @@ html, body {
     margin: 0 auto;
 }
 
-/* Cada item */
+/* Cada card */
 .sessao-ministerios .conteudo > div {
     background: white;
     border-radius: 10px;
@@ -249,8 +249,12 @@ html, body {
     padding: 20px;
     text-align: center;
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Efeito ao passar o mouse */
 .sessao-ministerios .conteudo > div:hover {
     transform: translateY(-5px);
 }
@@ -266,9 +270,11 @@ html, body {
 /* Imagens */
 .sessao-ministerios .conteudo img {
     width: 100%;
-    height: 200px;
+    height: auto;
+    aspect-ratio: 16 / 9; /* ou use 4/3, 1/1, etc conforme desejado */
     object-fit: cover;
     border-radius: 8px;
+    display: block;
 }
 
 /* Responsivo */

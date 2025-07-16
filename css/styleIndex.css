@@ -444,7 +444,7 @@ html, body {
     align-items: center;
     gap: 2rem;
     margin-bottom: 3rem;
-    top: -3rem;
+    top: 3rem;
 }
 
 .ministerio-img img {
@@ -486,7 +486,7 @@ html, body {
 /* Botão no canto inferior esquerdo */
 .botao-conecte {
     position: relative;
-    bottom: 10rem;
+    bottom: 2rem;
     margin-bottom: 5rem;
     margin-left: 6rem;
     z-index: 3;
@@ -1084,20 +1084,19 @@ html, body {
 }
 
 .titulo-parte {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    margin: 2rem 0 2rem 12rem;
+    margin: 0 12rem 1rem 12rem; /* alinhado com os outros */
 }
 
 /* Container do botão */
 .bloco-conectar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* alinhamento padrão */
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 12rem;
     gap: 2rem;
 }
 
@@ -1124,42 +1123,43 @@ html, body {
   .caixa-conectar {
     padding: 4rem 2rem;
     margin-top: 5rem;
-    align-items: left;
+    align-items: flex-start;
     text-align: left;
   }
 
   .titulo-conhecer,
-  .titulo-conectar,
-  .titulo-parte {
-    margin: 1rem 0;
-    text-align: left;
-  }
-
-  .titulo-conhecer {
-    font-size: 1.6rem;
-  }
-
   .titulo-conectar {
-    font-size: 2.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: auto;
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
   }
 
   .titulo-parte {
+    margin-left: 0rem !important;   /* força a margem para alinhar */
+    margin-right: 2rem;
     font-size: 2.8rem;
+    width: auto;
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
   }
 
   .bloco-conectar {
     flex-direction: column;
-    padding: 0;
     gap: 2rem;
-    align-items: left;
+    align-items: flex-start;
+    padding: 0 2rem;
   }
 
   .botao-link-conectar {
     font-size: 1.6rem;
     padding: 1.2rem 2rem;
-    width: 90%;
-    max-width: 300px;
-    justify-content: left;
+    width: auto;
+    max-width: 90%;
+    justify-content: flex-start;
   }
 }
 
