@@ -825,6 +825,7 @@ html, body {
     bottom: 2rem;
     left: 8rem;
     top: 60rem;
+    z-index: 3;
 }
 
 /* Reutilizando botao-link padrão */
