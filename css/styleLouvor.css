@@ -146,24 +146,24 @@ html, body {
 
 .sessao-generosidade {
     background-color: #0c2c94;
-    height: auto; /* ou ajuste conforme o conteúdo */
+    height: auto;
     min-height: 90vh;
-    width: 80vw;
+    width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     padding: 2rem;
     color: #fff;
 }
-
 
 .caixa-generosidade {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
     gap: 4rem;
+    padding-right: 4rem; /* afastamento da borda direita */
 }
 
 .generosidade-texto {
@@ -215,68 +215,121 @@ html, body {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
 }
 
 .generosidade-img img {
-    max-width: 70%;
+    max-width: 700px;
+    width: 100%;
     height: auto;
+    object-fit: contain;
     border-radius: 5px;
-    margin-left: 95rem;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .generosidade-texto h1 {
+        font-size: 6rem;
+        margin-left: 4rem;
+    }
+
+    .generosidade-texto p {
+        font-size: 1.6rem;
+        margin-left: 5rem;
+    }
+
+    .botao-link {
+        margin-left: 5rem;
+    }
+
+    .generosidade-img img {
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 768px) {
-  .sessao-generosidade {
-    width: 100vw;
-    padding: 2rem 1rem;
-    min-height: auto;
-    flex-direction: column;
-  }
+    .sessao-generosidade {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
 
-  .caixa-generosidade {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-  }
+    .caixa-generosidade {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding-right: 0;
+    }
 
-  .generosidade-img {
-    justify-content: center;
-    width: 100%;
-  }
+    .generosidade-img {
+        justify-content: center;
+        padding-right: 0;
+        width: 100%;
+    }
 
-  .generosidade-img img {
-    max-width: 100%;
-    height: auto;
-    margin-left: 0;
-  }
+    .generosidade-img img {
+        max-width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
 
-  .generosidade-texto {
-    text-align: left;
-    width: 100%;
-    text-align: center;
-    padding: 0 1rem;
-  }
+    .generosidade-texto {
+        width: 100%;
+        text-align: left;
+        padding: 0 1rem;
+    }
 
-  .generosidade-texto h1 {
-    text-align: left;
-    margin: 5rem auto 3rem auto;
-    width: 100%;
-    font-size: 5rem;
-  }
+    .generosidade-texto h1 {
+        font-size: 5rem;
+        margin: 5rem 0 3rem 2rem;
+        width: 100%;
+    }
 
-  .generosidade-texto p {
-    text-align: left;
-    margin: 0 auto 3rem auto;
-    width: 100%;
-    font-size: 1.5rem;
-  }
+    .generosidade-texto p {
+        font-size: 1.5rem;
+        margin: 0 0 3rem 2rem;
+        width: 100%;
+    }
 
-  .botao-link {
-    text-align: left;
-    margin: 0 0;
-    padding: 1.2rem 3rem;
-    font-size: 1.4rem;
-    margin-bottom: 3rem;
-  }
+    .botao-link {
+        padding: 1.2rem 3rem;
+        font-size: 1.4rem;
+        margin-left: 2rem; /* 👈 alinhamento à esquerda */
+        margin-bottom: 3rem;
+    }
+}
+
+/* Responsivo para Tablets */
+@media (min-width: 768px) and (max-width: 1366px) {
+    .generosidade-texto h1 {
+        font-size: 9rem;
+        margin-left: 5rem;
+        width: 100%;
+    }
+
+    .generosidade-texto p {
+        font-size: 1.6rem;
+        margin-left: 5rem;
+        margin-right: 2rem;
+        width: auto;
+        max-width: 90%;
+        word-break: break-word;
+    }
+
+    .botao-link {
+        margin-left: 5rem;
+        font-size: 1.5rem;
+        padding: 1.5rem 4rem;
+    }
+
+    .generosidade-img img {
+        max-width: 950px;
+    }
+
+    .caixa-generosidade {
+        padding-right: 2rem;
+    }
 }
 
 .voluntario {

@@ -939,6 +939,38 @@ html, body {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1366px) {
+    .escola-img {
+        margin-left: 0; /* Remove deslocamento lateral */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .escola-img img {
+        max-width: 90vw;
+        height: auto;
+        object-fit: contain; /* Evita cortes na imagem */
+        margin-bottom: 2rem;
+    }
+
+    .botao-escola {
+        top: auto; /* Remove valor fixo */
+        bottom: 4rem; /* Mais espaço visível */
+        left: 4rem;
+        right: 4rem;
+        width: auto;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .botao-link-escola {
+        font-size: 1.5rem;
+        padding: 1.2rem 2rem;
+        width: fit-content;
+    }
+}
+
 
 /* Container principal da seção */
 .caixa-calendario {
