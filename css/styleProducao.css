@@ -248,7 +248,7 @@ html, body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1052px) {
     .sessao-generosidade {
         flex-direction: column;
         padding: 2rem 1rem;
@@ -438,20 +438,22 @@ html, body {
 .sessao-primeiros-passos {
   background-color: #fff;
   color: #000;
-  height: 70vh; /* cobre 70% da altura da tela */
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
+  overflow: hidden;
 }
 
 .container-primeiros-passos {
   display: flex;
-  flex-direction: row-reverse; /* imagem à direita */
+  flex-direction: row-reverse;
   max-width: 1200px;
   width: 100%;
   gap: 4rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .imagem-primeiros-passos img {
@@ -481,7 +483,7 @@ html, body {
   color: #000;
 }
 
-/* Responsivo */
+/* Ajuste para dispositivos pequenos (até 768px) */
 @media (max-width: 768px) {
   .sessao-primeiros-passos {
     height: auto;
@@ -518,90 +520,39 @@ html, body {
   }
 }
 
-.sessao-escola-reino {
-  background-color: #000;
-  color: #fff;
-  height: 70vh; /* cobre 70% da altura da tela */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-}
-
-.container-escola-reino {
-  display: flex;
-  max-width: 1200px;
-  width: 100%;
-  gap: 4rem;
-  align-items: center;
-}
-
-.imagem-escola-reino img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  width: 400px;
-  max-height: 100%;
-}
-
-.conteudo-escola-reino {
-  flex: 1;
-}
-
-.conteudo-escola-reino h1 {
-  font-size: 5.3rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.conteudo-escola-reino p {
-  font-size: 1.6rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  color: #fff;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .sessao-escola-reino {
+/* Ajuste específico entre 769px e 970px */
+@media (min-width: 769px) and (max-width: 970px) {
+  .sessao-primeiros-passos {
     height: auto;
-    padding: 3rem 1rem;
+    padding: 4rem 2rem;
   }
 
-  .container-escola-reino {
+  .container-primeiros-passos {
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
+    gap: 3rem;
   }
 
-  .imagem-escola-reino img {
+  .imagem-primeiros-passos img {
     width: 100%;
-    max-width: 100%;
+    max-width: 500px;
     height: auto;
-    border-radius: 10px;
   }
 
-  .conteudo-escola-reino  {
+  .conteudo-primeiros-passos {
     width: 100%;
+    max-width: 800px;
     text-align: center;
   }
 
-  .conteudo-escola-reino h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+  .conteudo-primeiros-passos h1 {
+    font-size: 4rem;
   }
 
-  .conteudo-escola-reino p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  .conteudo-primeiros-passos p {
+    font-size: 1.5rem;
   }
 }
-
-
-
 
 .sessao-equipe {
   background-color: #f4f4f4;

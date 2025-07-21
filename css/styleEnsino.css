@@ -180,13 +180,14 @@ html, body {
 }
 
 .sessao-escola {
-    height: auto; /* ou ajuste conforme o conteúdo */
+    height: auto;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
     color: #000;
+    overflow: hidden; /* evita sobreposição visual */
 }
 
 .caixa-escola {
@@ -196,6 +197,7 @@ html, body {
     max-width: 1200px;
     width: 100%;
     gap: 4rem;
+    flex-wrap: wrap;
 }
 
 .escola-texto {
@@ -209,11 +211,14 @@ html, body {
     font-size: 10rem;
     font-family: "Playfair Display", serif;
     font-weight: 400;
+    line-height: 1.1;
+    word-break: break-word;
 }
 
 .escola-texto p {
     font-size: 3rem;
-    line-height: 1.6;
+    line-height: 1.4;
+    word-break: break-word;
 }
 
 .botao-link {
@@ -244,53 +249,63 @@ html, body {
 
 .escola-img img {
     max-width: 100%;
-    height: 150%;
+    height: auto;
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+/* Tablet e intermediário: 481px até 768px */
+@media (min-width: 481px) and (max-width: 768px) {
     .sessao-escola {
-        margin-top: -12rem;
-        padding: 2rem 1rem;
+        padding: 2rem 1.5rem;
+        margin-top: 0; /* corrigido para evitar sobreposição */
     }
 
     .caixa-escola {
         flex-direction: column;
-        gap: 2rem;
+        align-items: center;
         text-align: center;
+        gap: 3rem;
     }
 
     .escola-texto h1 {
-      margin-top: -4rem;
-        font-size: 4rem;
+        font-size: 4.5rem;
+        margin-top: 2rem;
     }
 
     .escola-texto p {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .botao-link {
         font-size: 1.4rem;
         padding: 1.4rem 3rem;
-        justify-content: center;
         margin: 0 auto;
-    }
-
-    .escola-img {
         justify-content: center;
     }
 
     .escola-img img {
-        margin-top: 4rem;
-        margin-bottom: -18rem;
-        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         max-width: 100%;
+        height: auto;
     }
 }
 
+/* Extra pequeno: 480px ou menos */
 @media (max-width: 480px) {
+    .sessao-escola {
+        padding: 2rem 1rem;
+    }
+
+    .caixa-escola {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
     .escola-texto h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
+        margin-top: 1rem;
     }
 
     .escola-texto p {
@@ -300,6 +315,17 @@ html, body {
     .botao-link {
         font-size: 1.2rem;
         padding: 1.2rem 2.5rem;
+    }
+
+    .escola-img {
+        justify-content: center;
+    }
+
+    .escola-img img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        max-width: 100%;
+        height: auto;
     }
 }
 

@@ -174,20 +174,22 @@ html, body {
 }
 
 .generosidade-texto h1 {
-    margin-left: 8rem;
-    width: 300%;
+    margin-left: 5rem;
     font-size: 9rem;
     font-family: "Playfair Display", serif;
     font-weight: 400;
     margin-bottom: 2rem;
+    width: 100%; /* REMOVIDO 300% */
 }
 
 .generosidade-texto p {
-    margin-left: 9rem;
-    width: 300%;
+    margin-left: 5rem;
     font-size: 1.7rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+    width: 100%; /* REMOVIDO 300% */
+    max-width: 90%;
+    word-break: break-word;
 }
 
 .botao-link {
@@ -248,7 +250,7 @@ html, body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1052px) {
     .sessao-generosidade {
         flex-direction: column;
         padding: 2rem 1rem;
@@ -438,20 +440,22 @@ html, body {
 .sessao-primeiros-passos {
   background-color: #000;
   color: #fff;
-  height: 70vh; /* cobre 70% da altura da tela */
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
+  overflow: hidden;
 }
 
 .container-primeiros-passos {
   display: flex;
-  flex-direction: row-reverse; /* imagem à direita */
+  flex-direction: row-reverse;
   max-width: 1200px;
   width: 100%;
   gap: 4rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .imagem-primeiros-passos img {
@@ -481,7 +485,7 @@ html, body {
   color: #fff;
 }
 
-/* Responsivo */
+/* Ajuste para dispositivos pequenos (até 768px) */
 @media (max-width: 768px) {
   .sessao-primeiros-passos {
     height: auto;
@@ -515,6 +519,40 @@ html, body {
     font-size: 1.4rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+  }
+}
+
+/* Ajuste específico entre 769px e 970px */
+@media (min-width: 769px) and (max-width: 970px) {
+  .sessao-primeiros-passos {
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .container-primeiros-passos {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .imagem-primeiros-passos img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .conteudo-primeiros-passos {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .conteudo-primeiros-passos h1 {
+    font-size: 4rem;
+  }
+
+  .conteudo-primeiros-passos p {
+    font-size: 1.5rem;
   }
 }
 
