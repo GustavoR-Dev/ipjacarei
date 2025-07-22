@@ -525,7 +525,7 @@ html, body {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 930px) {
     .caixa-ministerio {
         flex-direction: column;
         height: auto;
@@ -603,6 +603,111 @@ html, body {
         max-width: 280px;
         width: auto;
         text-align: left;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .caixa-ministerio {
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .ministerio-conteudo {
+        padding: 2rem;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .titulo-secao-ministerio {
+        margin-top: 6rem;
+        font-size: 2rem;
+        left: 3rem;
+    }
+
+    .titulo-ministerio {
+        top: 20rem; /* reduzido de 30rem */
+        font-size: 4rem;
+        left: 3rem;
+    }
+
+    .ministerio-img {
+        top: 3rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .ministerio-img img {
+        width: 360px;
+        height: 360px;
+    }
+
+    .botao-conecte {
+        top: 2rem;
+        margin-left: 3rem;
+    }
+
+    .botao-link-conecte {
+        font-size: 1.3rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .caixa-ministerio {
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .ministerio-conteudo {
+        padding: 2rem;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .titulo-secao-ministerio {
+        margin-top: 2rem;
+        font-size: 2rem;
+        left: 3rem;
+    }
+
+    .titulo-ministerio {
+        font-size: 2rem;
+        position: relative;
+        top: 16rem;
+        left: 0;
+        max-width: 100%;
+        margin-bottom: 0rem;
+        text-align: left;
+    }
+
+    .ministerio-img {
+        position: left;
+        top: 3rem;
+        margin-bottom: 1.5rem;
+        justify-content: left;
+        gap: 1rem;
+    }
+
+    .ministerio-img img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+    }
+
+    .botao-conecte {
+        margin-left: 0;
+        margin-top: 1rem;
+        padding-top: 0;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .botao-link-conecte {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
+        max-width: 220px;
     }
 }
 
@@ -971,6 +1076,78 @@ html, body {
     }
 }
 
+@media screen and (max-width: 1024px) and (max-height: 700px) {
+    .caixa-escola {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 6rem 6rem;
+        margin-top: 6rem;
+    }
+
+    .escola-conteudo {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .titulo-secao-escola {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 2rem;
+        margin-bottom: 8rem;
+        margin-top: 2rem;
+        color: white;
+        z-index: 3;
+        text-align: left;
+    }
+
+    .titulo-escola,
+    .subtitulo-escola {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 4.5rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        color: white;
+        z-index: 3;
+        text-align: left;
+    }
+
+    .escola-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .escola-img img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .botao-escola {
+        position: relative;
+        margin-top: 8rem;
+        left: 0;
+        z-index: 3;
+    }
+
+    .botao-link-escola {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+}
 
 /* Container principal da seção */
 .caixa-calendario {
