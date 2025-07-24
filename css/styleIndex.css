@@ -415,7 +415,7 @@ html, body {
     letter-spacing: 2px;
     color: white;
     text-transform: uppercase;
-    margin-top: 13rem;
+    margin-top: 6rem;
     font-family: "Playfair Display", serif;
     font-weight: 300;
 }
@@ -443,8 +443,7 @@ html, body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3rem;
-    top: 3rem;
+    margin-bottom: 6rem;
 }
 
 .ministerio-img img {
@@ -497,7 +496,7 @@ html, body {
 .botao-link-conecte {
     background-color: #fff;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-bottom: 8rem;
     margin-right: 3rem;
     display: inline-block;
     font-size: 1.7rem;
@@ -591,6 +590,7 @@ html, body {
         top: 2rem;
         padding-top: 1rem; /* pequeno espaço após as imagens */
         margin-left: 2rem; /* alinha à esquerda */
+        margin-bottom: 0;
         display: flex;
         justify-content: flex-start;
         width: 100%;
