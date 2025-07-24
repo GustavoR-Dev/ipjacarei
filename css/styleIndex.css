@@ -865,6 +865,7 @@ html, body {
     margin-top: 13rem;
     font-family: "Playfair Display", serif;
     font-weight: 300;
+    z-index: 3;
 }
 
 /* Título principal centralizado */
