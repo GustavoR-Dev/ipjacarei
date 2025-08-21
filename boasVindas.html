@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-Vindas - Igreja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/boasVindas.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="conteudo-limitado">
+            <a href="index.html" class="logo">
+                <img src="./img/Logo Branca- sem frase.png" alt="logo-igreja" />
+            </a>
+
+            <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="quemSomos.html">A Igreja</a>
+                <a href="gc's.html">GC'S</a>
+                <a href="generosidade.html">Generosidade</a>
+                <a href="contato.html">Contato</a>
+                <a href="testemunhos.html">Testemunhos</a>
+                <a href="ensino.html">Ensino</a>
+                <a href="boasVindas.html">Bem Vindo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Seja Bem-Vindo(a)!</h1>
+                <p class="hero-subtitle">É uma alegria tê-lo(a) conosco. Prepare-se para uma experiência transformadora em nossa comunidade de fé.</p>
+                <a href="#video" class="cta-button">Assistir Mensagem</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/ZDGkpjFvUnM?start=1"
+                        title="Mensagem dos Pastores"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato">
+        <div>
+            <h1>Queremos Conhecer Você</h1> 
+        </div>
+
+        <div>
+            <p>Preencha o formulário abaixo para que possamos entrar em contato.</p> 
+        </div>
+
+        <form id="welcomeForm" class="formulario" action="" method="POST">
+
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="assunto">Telefone *</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade">
+
+            <label for="como-conheceu">Como nos conheceu?</label>
+            <select id="como_conheceu" name="como_conheceu" style="height: 4rem; border-radius: 10px;">
+                <option value="">Selecione...</option>
+                <option value="amigo">Indicação de amigo</option>
+                <option value="internet">Internet/Redes Sociais</option>
+                <option value="evento">Evento da igreja</option>
+                <option value="passando">Passando pela igreja</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Compartilhe conosco seus pensamentos, dúvidas ou pedidos de oração..."></textarea>
+            
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <span class="checkmark"></span>
+                    Desejo receber informações sobre eventos e atividades da igreja
+                </label>
+            </div>
+            
+            <input type="hidden" name="_next" value="https://gustavor-dev.github.io/ipjacarei/agradecimento.html">
+
+            <!-- Botão com texto e loader -->
+            <button type="submit" class="submit-button">
+                <span class="button-text">Enviar</span>
+                <span class="button-loader" style="display:none;">⏳</span>
+            </button>
+
+            <p id="mensagem-resultado"></p>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="texto-footer">Copyright &copy; 2025 IP Jacareí | Desenvolvido por gustavo.rossi2612@gmail.com</p>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="success-icon">✅</div>
+                <h3>Informações Enviadas!</h3>
+                <p>Obrigado por se conectar conosco. Em breve entraremos em contato!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/scriptBoasVindas.js"></script>
+</body>
+</html>
+
