@@ -338,6 +338,50 @@ html, body {
     padding-bottom: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .caixa-sobre {
+        padding: 5rem 2rem;
+    }
+
+    .titulo {
+        font-size: 3rem;
+        text-align: left;
+        padding-bottom: 2rem;
+    }
+
+    .caixa-sobre .sobre-container {
+        flex-direction: column;
+        align-items: flex-start; /* mantém o alinhamento à esquerda */
+        gap: 2rem;
+    }
+
+    .caixa-sobre .sobre-container .sobre-img {
+        display: none; /* remove a imagem no responsivo */
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto {
+        flex: 1 1 100%;
+        padding: 0;
+        text-align: left;
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto h3 {
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto p {
+        font-size: 1.5rem;
+        padding: 1rem 0 2rem 0;
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto a {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .caixa-sobre {
         padding: 5rem 2rem;
@@ -386,7 +430,7 @@ html, body {
 .caixa-ministerio {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa a altura total da tela */
+    height: 90vh; /* Ocupa a altura total da tela */
     background-color: #000;
     color: white;
     display: flex;
@@ -452,7 +496,7 @@ html, body {
 
 .titulo-secao-ministerio {
     font-family: "Playfair Display", serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -460,9 +504,9 @@ html, body {
 
 .titulo-ministerio {
     font-family: "Montserrat", sans-serif;
-    font-size: 5rem; /* Tamanho ajustado */
+    font-size: 70px; /* Tamanho ajustado */
     font-weight: 400;
-    max-width: 60%; /* Limita a largura para quebrar a linha como na referência */
+    max-width: 100%; /* Limita a largura para quebrar a linha como na referência */
     line-height: 1.2;
     margin: 0; /* Remove margens padrão */
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
@@ -476,12 +520,12 @@ html, body {
     background-color: #fff;
     color: #000;
     cursor: pointer;
-    display: inline-flex; /* Usa flex para alinhar ícone e texto */
-    align-items: center;
-    font-size: 1.1rem;
-    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    padding: 1.5rem 2rem;
     border: none;
-    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -503,32 +547,29 @@ html, body {
     }
 
     .ministerio-img-container img {
-        width: 400px;
-        height: 400px;
+        width: 530px;
+        height: 530px;
     }
 }
 
 /* Telas de Celular (até 768px) */
 @media (max-width: 768px) {
     .caixa-ministerio {
-        height: auto; /* Altura automática para conteúdo fluir */
-        min-height: 90vh;
+        height: 60vh; /* Altura automática para conteúdo fluir */
     }
 
     .ministerio-texto-container {
-        padding: 2rem;
+        padding: 4rem;
         justify-content: flex-start; /* Alinha itens ao topo */
-        gap: 20vh; /* Espaço entre o título e o botão */
+        gap: 10vh; /* Espaço entre o título e o botão */
     }
 
     .titulo-secao-ministerio {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .titulo-ministerio {
-        font-size: 2.8rem;
-        max-width: 100%; /* Ocupa toda a largura */
-        text-align: left;
+        display: none;
     }
 
     .ministerio-img-container {
@@ -549,14 +590,19 @@ html, body {
         transform: translateX(25%);
     }
 
+    .botao-conecte {
+        margin-top: 95px; /* Ajuste para desktop */
+        padding-bottom: 0;
+    }
+
     .botao-link-conecte {
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 0.8rem 1.2rem;
     }
 }
 
 /* Telas menores (até 480px) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .ministerio-texto-container {
         gap: 25vh;
     }
@@ -747,7 +793,7 @@ html, body {
 
 .titulo-secao-escola {
     font-family: "Playfair Display", serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -756,7 +802,7 @@ html, body {
 
 .titulo-escola {
     font-family: "Montserrat", sans-serif;
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-weight: 500;
     line-height: 1.2;
     margin: 0;
@@ -779,12 +825,12 @@ html, body {
     background-color: #fff;
     color: #000;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.1rem;
-    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    padding: 1.5rem 2rem;
     border: none;
-    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -813,7 +859,7 @@ html, body {
 /* Telas de Celular (até 768px) */
 @media (max-width: 768px) {
     .caixa-escola {
-        height: 90vh; /* Reduz a altura em telas menores */
+        height: 60vh; /* Reduz a altura em telas menores */
     }
 
     .escola-conteudo {
@@ -822,13 +868,13 @@ html, body {
     }
 
     .titulo-secao-escola {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         margin-bottom: 1.5rem;
     }
 
     .titulo-escola,
     .subtitulo-escola {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 
     .subtitulo-escola {
@@ -836,7 +882,7 @@ html, body {
     }
 
     .botao-link-escola {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0.8rem 1.2rem;
     }
 }
@@ -1027,6 +1073,50 @@ html, body {
 .botao-link-conectar svg {
     margin-left: 0.5rem;
     font-size: large;
+}
+
+@media (max-width: 1024px) {
+    .caixa-conectar {
+    padding: 4rem 2rem;
+    margin-top: 5rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .titulo-conhecer,
+  .titulo-conectar {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: auto;
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .titulo-parte {
+    margin-left: 0rem !important;   /* força a margem para alinhar */
+    margin-right: 2rem;
+    font-size: 2.8rem;
+    width: auto;
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .bloco-conectar {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 0 2rem;
+  }
+
+  .botao-link-conectar {
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem;
+    width: auto;
+    max-width: 90%;
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
