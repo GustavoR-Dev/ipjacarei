@@ -249,6 +249,7 @@ html, body {
     font-size: 4.5rem;
     font-weight: 300;
     font-family: "Playfair Display", serif;
+    text-transform: uppercase;
     margin-top: -1rem;
     margin-left: 67%;
     color: var(--black);

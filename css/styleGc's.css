@@ -459,12 +459,8 @@ html, body {
     background-color: #1d5c17;
 }
 
-.caixa-pastores {
-    background-color: #1c1fa7;
-}
-
 .caixa-homens {
-    background-color: #ad390b;
+    background-color: #1c1fa7;
 }
 
 .botao-contato {
@@ -507,7 +503,7 @@ html, body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.botao-contato-pastores {
+.botao-contato-homens {
     display: inline-block;
     padding: 12px 28px;
     background: linear-gradient(135deg, #1e1f79, #0509dd);
@@ -521,7 +517,7 @@ html, body {
     transition: all 0.3s ease-in-out;
 }
 
-.botao-contato-pastores:hover {
+.botao-contato-homens:hover {
     background: linear-gradient(135deg, #1e1f79, #0509dd);
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -543,26 +539,6 @@ html, body {
 
 .botao-contato-casais:hover {
     background: linear-gradient(135deg,  rgb(97, 15, 93),rgb(161, 14, 154));
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.botao-contato-homens {
-    display: inline-block;
-    padding: 12px 28px;
-    background: linear-gradient(135deg, #ad390b,#91330e);
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-}
-
-.botao-contato-homens:hover {
-    background: linear-gradient(135deg,  #ad390b,#91330e);
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
