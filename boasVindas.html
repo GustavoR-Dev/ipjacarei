@@ -38,18 +38,18 @@
             <div class="hero-text">
                 <h1 class="hero-title">Seja Bem-Vindo(a)!</h1>
                 <p class="hero-subtitle">É uma alegria tê-lo(a) conosco. Prepare-se para uma experiência transformadora em nossa comunidade de fé.</p>
-                <a href="#video" class="cta-button">Assistir Mensagem</a>
+                <a class="cta-button" href="#video">Assistir Mensagem</a>
             </div>
         </div>
         <div class="hero-background"></div>
     </section>
 
     <!-- Video Section -->
-    <section id="video" class="video-section">
+    <section class="video-section" id="video">
         <div class="container">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <iframe 
+                    <iframe
                         src="https://www.youtube.com/embed/ZDGkpjFvUnM?start=1"
                         title="Mensagem dos Pastores"
                         frameborder="0"
@@ -72,13 +72,13 @@
 
         <form id="welcomeForm" class="formulario" action="" method="POST">
 
-            <label for="nome">Nome Completo *</label>
+            <label for="nome">Nome Completo</label>
             <input type="text" id="nome" name="nome" required>
 
-            <label for="email">E-mail *</label>
+            <label for="email">E-mail</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="assunto">Telefone *</label>
+            <label for="assunto">Telefone</label>
             <input type="text" id="telefone" name="telefone" required>
 
             <label for="idade">Idade</label>
@@ -90,19 +90,11 @@
                 <option value="amigo">Indicação de amigo</option>
                 <option value="internet">Internet/Redes Sociais</option>
                 <option value="evento">Evento da igreja</option>
-                <option value="passando">Passando pela igreja</option>
+                <option value="passando">Passando em frente</option>
                 <option value="outro">Outro</option>
             </select>
 
             <textarea id="mensagem" name="mensagem" rows="4" placeholder="Compartilhe conosco seus pensamentos, dúvidas ou pedidos de oração..."></textarea>
-            
-            <div class="form-group checkbox-group">
-                <label class="checkbox-label">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <span class="checkmark"></span>
-                    Desejo receber informações sobre eventos e atividades da igreja
-                </label>
-            </div>
             
             <input type="hidden" name="_next" value="https://gustavor-dev.github.io/ipjacarei/agradecimento.html">
 
